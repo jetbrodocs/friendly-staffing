@@ -2,14 +2,20 @@
 
 ## Project Description
 
-<!-- Replace this with a 2-3 sentence description of the project -->
-[TODO: Describe the project — what site, facility, or system is being documented? What is the goal of the documentation effort?]
+Friendly Staffing (1953039 Ontario Inc.) is a temp-to-perm staffing agency with two offices in Mississauga, Ontario. It places mostly newly arrived immigrant workers with clients such as food plants and warehouses. Today it runs on paper forms, per-office spreadsheets, WhatsApp and QuickBooks. This project documents current operations and scopes a Phlo-built system in exactly two phases. Phase 1: worker onboarding, employer order intake, shortlisting, communication tracking, dispatch/replacements, and cross-verified timesheets with pay/bill rates. Phase 2: Friendly Staffing's own timekeeping, invoicing, payroll/payments (QuickBooks replacement) and the worker self-serve job portal.
 
 ## Domain Glossary
 
 | Term | Definition |
 |---|---|
-| <!-- Add terms as you encounter them --> | |
+| Pay rate | Hourly rate Friendly Staffing pays the worker, before deductions |
+| Bill rate | Hourly rate the client pays Friendly Staffing for a position; fixed per client and position |
+| Employee code | 6-digit worker ID, written "Y MM NNN" (year digit, month, then staff and serial). Assigned when the worker is validated and marked ready to work |
+| Order | A client's request for workers (count, position, shift time, date) |
+| Temp-to-perm / conversion | Client hires a placed worker onto its own payroll. A fee applies if this happens before the contract period ends |
+| Survival job | Interim work new immigrants take before finding work in their field |
+| GMP | Good Manufacturing Practice: site rules at food clients (hairnet, apron, no eating on the floor) |
+| Timekeeper | Person at the client site recording worker in/out times |
 
 ## Skills
 
@@ -49,7 +55,9 @@ This project includes skills installed in `.claude/skills/`. Claude Code auto-di
 
 | Name | Role | Notes |
 |---|---|---|
-| <!-- Add team members --> | | |
+| Tejash Jain | Promoter, Friendly Staffing (client) | Appears as "Priya Jain" in the 2026-10-21 Fathom transcript |
+| Rohan Patel | Jetbro, engagement lead | |
+| Honey Darji | Jetbro | Attended the 2026-10-21 workshop |
 
 ## Branding
 
@@ -71,10 +79,14 @@ Documents carry `created:` and `updated:` dates in their frontmatter. These matt
 - **When reading any doc:** note its `updated:` date relative to today. If it is old, treat the content as **possibly outdated** — verify before relying on it, especially for decisions, tech choices, and scope. Do not assume an old document reflects the current state.
 - **Git is the source of truth** for when a file actually changed: `git log -1 --format=%cs <file>`. If it disagrees with the frontmatter, trust git.
 
+## Client Deliverables
+
+| Deliverable | Where | Notes |
+|---|---|---|
+| Platform architecture (Phlo-branded, A4, 15 pages) | HTML source: `scope/phlo-friendly-staffing-architecture.html`. Review copy: https://claude.ai/artifact/TbPdDSSTccQMVzM1Qg65Xi | Regenerate the PDF from the HTML with headless Chrome. The PDF is kept outside the repo at `~/Desktop/Jetbro/Phlo for Friendly Staffing - Platform Architecture.pdf` |
+
 ## Project-Specific Rules
 
-<!-- Add any rules that apply only to this project -->
-<!-- Examples: -->
-<!-- - All observations must be reviewed within 48 hours of capture -->
-<!-- - Use metric units only -->
-<!-- - Reference SAP transaction codes where applicable -->
+- Exactly two phases. Every requirement must be tagged Phase 1, Phase 2 or out of scope.
+- Spell the platform "Phlo" (transcripts render it as "Flow").
+- Jetbro's pre-workshop draft documents are unreliable drafts; the 2026-10-21 workshop and Rohan's 2026-10-26 answers take precedence.

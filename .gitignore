@@ -1,0 +1,7 @@
+# Jetbro internal drafts: keep out of GitHub
+00-inbox/jetbro-draft-journey-flow-2026-10.pdf
+00-inbox/jetbro-draft-platform-journey-2026-10.pdf
+# Client data with real worker names: keep out of GitHub
+00-inbox/23083148_260817.pdf
+# Exported PDFs live outside the repo
+scope/*.pdf
