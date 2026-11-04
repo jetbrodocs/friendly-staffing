@@ -2,7 +2,7 @@
 title: "Shortlisting, Outreach and Confirmation"
 status: draft
 created: 2026-10-27
-updated: 2026-11-03
+updated: 2026-11-04
 tags: [process, shortlisting, communication, phase-1]
 ---
 
@@ -91,7 +91,7 @@ C2. Staff record the employer's decision.
 C3. For a trial, staff record the trial date and outcome; the outcome counts as the employer's decision.
 C4. [UNKNOWN: what the employer sees, and what happens if it does not reply in time]
 
-## Phase 2 Changes
+## Build Later
 
 - Workers can log in to a portal, see open roles and apply. Applications enter the same ranked shortlist.
 - Ontario job-posting rules apply to public postings: pay range, AI-screening disclosure, no Canadian-experience requirement.

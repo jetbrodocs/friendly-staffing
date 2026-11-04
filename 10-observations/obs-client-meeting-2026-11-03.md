@@ -2,7 +2,7 @@
 title: "Follow-up Meeting with Friendly Staffing"
 status: in-review
 created: 2026-11-03
-updated: 2026-11-03
+updated: 2026-11-04
 tags: [observation, meeting, worker-status, shortlisting, approval, replacements, orders, pay-type, payroll, invoicing]
 ---
 
@@ -70,7 +70,7 @@ Rohan Patel's notes from the follow-up meeting with the Friendly Staffing team, 
   - the payment method the worker prefers
 - Regular and overtime rates differ.
 - The sheet produces each worker's **gross pay**.
-- This is the payroll Excel sample Friendly Staffing has been asked for. [UNKNOWN: sample still awaited]
+- Sample received 2026-11-04: [obs-client-payroll-samples-2026-11-04](obs-client-payroll-samples-2026-11-04.md).
 
 ### 9. Two payment methods
 
@@ -82,8 +82,8 @@ Rohan Patel's notes from the follow-up meeting with the Friendly Staffing team, 
 - Workers are often given the choice of payment method.
 - A worker can choose **A, B, or both**.
 - Processing gives a **final figure after deductions** for each worker. It is used both for the accounts and for the bank payment.
-- [UNKNOWN: where the method A deductions are calculated: in the Excel sheet or in QuickBooks]
-- [UNKNOWN: how pay is split when a worker chooses both]
+- **Answered 2026-11-04:** QuickBooks calculates the method A deductions; the Excel produces gross pay only.
+- Pay is split by hours (Rohan, 2026-11-03). The payroll Excel sample shows mode codes beyond A and B (A20, A24, A40, "A20 Only", 2D) [UNKNOWN: meaning].
 
 ### 10. QuickBooks pay stub and bank payment
 
@@ -97,6 +97,8 @@ Rohan Patel's notes from the follow-up meeting with the Friendly Staffing team, 
 4. Staff export an **XML file** from QuickBooks. The XML is preferred over a QuickBooks summary.
 5. Staff import the XML into the **bank portal**, which processes the payments.
 
+**Corrected 2026-11-04 (Tejash):** there is no XML file. Staff key about 350 payments by hand into QuickBooks, then key them again into the bank portal. See [qa-2026-11-04-tejash-information-reply](qa-2026-11-04-tejash-information-reply.md).
+
 Rohan's summary of the purpose: the worker's correct gross pay is recorded, the right deductions are applied for the chosen payment method, QuickBooks holds the right transactions, and the bank receives the right figures for the right workers.
 
 ### 11. Client invoicing
@@ -109,3 +111,4 @@ Rohan's summary of the purpose: the worker's correct gross pay is recorded, the 
 
 - Payroll and invoicing both run **weekly**.
 - Friendly Staffing's **margin is yet to be decided**, and how it works is not yet fully understood.
+- **Clarified 2026-11-04 (Rohan):** the bill rate is **derived from the pay rate**: when preparing invoices, staff add a margin to the pay rate by hand to get the bill rate.

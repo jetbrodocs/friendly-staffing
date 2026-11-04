@@ -2,7 +2,7 @@
 title: "Dispatch, No-shows and Replacements"
 status: draft
 created: 2026-10-27
-updated: 2026-11-03
+updated: 2026-11-04
 tags: [process, dispatch, replacements, phase-1]
 ---
 
@@ -87,7 +87,7 @@ C1. The client tells Friendly Staffing it wants to hire the worker.
 C2. Phlo shows the worker's first day at that client.
    - **If within the fee window (generally 6 months from the first day):** the conversion fee applies under the client's terms.
    - **If outside the window:** no fee.
-C3. The worker's record is updated (status, end of assignment). Invoicing the fee happens in Phase 2.
+C3. The worker's record is updated (status, end of assignment). Phlo invoices the fee (Phase 1, decided 2026-11-04).
 
 ### Exception D: No-show or Walk-off (employer side)
 
@@ -97,9 +97,9 @@ D3. Phlo opens a replacement order for the same position and shift, or the next 
 D4. The replacement order goes to shortlisting ([proc-03](proc-03-shortlisting-and-outreach.md)).
 D5. The incident counts in the worker's reliability history.
 
-## Phase 2 Changes
+## Build Later
 
-- Conversion fees are invoiced from Phlo (Exception C).
+- Nothing further. Conversion-fee invoices moved to Phase 1 on 2026-11-04.
 
 ## Connected Processes
 

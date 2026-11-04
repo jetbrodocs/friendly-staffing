@@ -2,7 +2,7 @@
 title: "Q&A: Rohan's Meeting Clarifications (2026-11-03)"
 status: in-review
 created: 2026-11-03
-updated: 2026-11-03
+updated: 2026-11-04
 tags: [observation, qa, worker-status, shortlisting, approval, orders, proposal]
 ---
 
@@ -66,6 +66,8 @@ Yes.
 
 In the payroll Excel. They are then verified in QuickBooks.
 
+**Corrected 2026-11-04 (Tejash):** the Excel produces gross pay only; QuickBooks calculates the method A deductions. See [qa-2026-11-04-tejash-information-reply](qa-2026-11-04-tejash-information-reply.md).
+
 **P2. When a worker uses both methods, how is pay split?**
 
 - By hours. Regular hours are split, and so are overtime hours.
@@ -75,6 +77,8 @@ In the payroll Excel. They are then verified in QuickBooks.
 **P3. Which bank, and what XML format?**
 
 Not known yet and not needed for the proposal. Keep the bank file as its own task or module.
+
+**Update 2026-11-04 (Tejash):** no XML file exists today; payments are keyed by hand into QuickBooks and then into the bank portal. The bank and its upload format stay open until the main scoping starts.
 
 **P4. Can the pay rate differ between method A and method B for the same job?**
 
@@ -88,6 +92,7 @@ Yes, they can be.
 
 - **No workers are paid outside the bank file.** Method A and method B workers are all paid through the bank.
 - **Pay rate and bill rate are independent.** Gross pay, deductions and pay stubs all use the pay rate. The bill rate is agreed separately between Friendly Staffing and each client. How bill rates are derived is not yet understood.
+  - **Clarified 2026-11-04 (Rohan):** the bill rate is **derived from the pay rate**: when preparing invoices, staff add a margin to the pay rate by hand to get the bill rate. See [qa-2026-11-04-tejash-information-reply](qa-2026-11-04-tejash-information-reply.md).
 - **Timekeeping:** every site has a timekeeper today. Friendly Staffing's own timekeeping must be a separate module inside Phlo. It stays in scope now; whether it is built later can be agreed later.
 - **QuickBooks cost:** Friendly Staffing pays about CAD 8,000 a year to QuickBooks for payroll and accounts. Removing payroll from QuickBooks reduces this considerably.
 
@@ -97,11 +102,11 @@ Tejash recommended, in the last call, that payroll finalisation and pay stubs mo
 
 | Moves to Phase 1 | Stays in Phase 2 |
 |---|---|
-| Own timekeeping (separate module, tablet at site) | Client invoicing and receivables |
+| Own timekeeping (separate module, on phones) | Client invoicing and receivables |
 | Payroll: payment methods A and B, hour split, CPP/EI/tax, vacation and holiday pay | Worker self-serve job portal |
 | TD1/TD1ON at onboarding | Loaded margin and profitability reporting |
 | Pay stubs | |
-| Bank XML payment file (own task, format to be confirmed) | |
+| Bank upload file (own task, format to be confirmed) | |
 | Final amounts pushed to QuickBooks accounts | |
 
 Rohan confirmed the Phase 2 column: the worker job portal, client invoicing and receivables, and loaded margin and profitability all stay in Phase 2.
@@ -112,6 +117,8 @@ Rohan confirmed the Phase 2 column: the worker job portal, client invoicing and 
 
 **Statutory figures (decided later the same day):** Phlo calculates remittance amounts and produces T4s, ROEs and WSIB figures in Phase 1. The actual payments to and from the government are made outside Phlo.
 
+**Extended 2026-11-04 (Tejash):** everything related to payroll comes from Phlo, including the filing files: ROE.BLK for ROE Web, T4 slips and the T4 electronic filing file.
+
 ## Information Requested from Friendly Staffing
 
 - payroll Excel and pay-stub samples
@@ -120,6 +127,8 @@ Rohan confirmed the Phase 2 column: the worker job portal, client invoicing and 
 - how method A and method B pay is calculated
 - how net pay is calculated from gross pay
 - whether vacation pay is added to each weekly pay (asked of Tejash separately)
+
+**Received 2026-11-04:** see [obs-client-payroll-samples-2026-11-04](obs-client-payroll-samples-2026-11-04.md). No bank XML exists.
 
 ## Scope, Sizing and Timeline Answers
 
@@ -134,6 +143,8 @@ Rohan confirmed the Phase 2 column: the worker job portal, client invoicing and 
 **S5. Employer sign-off on hours.** Rohan asked whether timesheets are approved and signed by the employer before they reach Friendly Staffing. The Molinaro's sample shows a supervisor signature on every page and worker initials on every day ([obs-client-timesheet-molinaros](obs-client-timesheet-molinaros.md)). [UNVERIFIED: whether every client signs, and whose employee the timekeeper is]
 
 **S6. Vacation pay.** Assumed added to each weekly pay. To be confirmed with Tejash.
+
+**Answered 2026-11-04:** vacation pay is accrued over an October to September year and paid once a year as a lump sum (sample stub). Both timesheet samples received that day also carry the client's signature.
 
 **S7. Users and timekeeping.**
 - 4 to 5 Friendly Staffing staff will use Phlo.

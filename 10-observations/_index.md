@@ -1,7 +1,7 @@
 ---
 title: "Observations Index"
 status: active
-updated: 2026-11-03
+updated: 2026-11-04
 ---
 
 # Observations
@@ -13,3 +13,5 @@ updated: 2026-11-03
 - [Q&A: Rohan's scope clarifications (2026-10-26)](qa-2026-10-26-rohan-scope-clarifications.md): phase decisions and open contradictions
 - [Follow-up meeting with Friendly Staffing (2026-11-03)](obs-client-meeting-2026-11-03.md): employee code at first job, editable priority order, approval only for some employers, two-sided no-shows, order deletion; today's pay and invoicing: payroll Excel, payment methods A and B, QuickBooks stubs, bank XML, manual invoices
 - [Q&A: Rohan's meeting clarifications (2026-11-03)](qa-2026-11-03-rohan-meeting-clarifications.md): worker statuses, who sets priorities, cancellations; proposal goal (scope, timeline, cost)
+- [Payroll, invoice and timesheet samples (2026-11-04)](obs-client-payroll-samples-2026-11-04.md): payroll Excel (gross only, rate B = 90% of A, mode codes), QuickBooks pay stubs, vacation pay once a year, client invoice, ROE, T4, two more timesheet formats, current registration form
+- [Q&A: Tejash's reply to the information request (2026-11-04)](qa-2026-11-04-tejash-information-reply.md): no bank file today (payments keyed twice), QuickBooks calculates deductions, everything payroll from Phlo including ROE.BLK and T4 files

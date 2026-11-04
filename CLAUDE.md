@@ -2,19 +2,22 @@
 
 ## Project Description
 
-Friendly Staffing (1953039 Ontario Inc.) is a temp-to-perm staffing agency with two offices in Mississauga, Ontario. It places mostly newly arrived immigrant workers with clients such as food plants and warehouses. Today it runs on paper forms, per-office spreadsheets, WhatsApp and QuickBooks. This project documents current operations and scopes a Phlo-built system in exactly two phases. The end goal is a proposal to Friendly Staffing for an end-to-end staffing and recruitment platform covering scope, timeline and cost only; detailing within the scope comes later. Phase 1 (re-phased 2026-11-03, target go-live 15 January 2027): worker onboarding, employer order intake, shortlisting, communication tracking (WhatsApp Business, email, SMS fallback), approvals and trials for the employers that need them, dispatch/replacements, Friendly Staffing's own timekeeping on phones (a separate module), and payroll in Phlo: payment methods A and B, deductions, pay stubs, the bank XML file and statutory figures (remittances, T4, ROE, WSIB; payments made outside Phlo), with final amounts pushed to QuickBooks, which stays for bookkeeping. Phase 2: client invoicing and receivables, the worker self-serve job portal and loaded-margin reporting. Commercial model: one-time development and implementation cost, hosting separate, 12-month maintenance contract; no Phlo licence. Amounts are kept outside git.
+Friendly Staffing (1953039 Ontario Inc.) is a temp-to-perm staffing agency with two offices in Mississauga, Ontario. It places mostly newly arrived immigrant workers with clients such as food plants and warehouses. Today it runs on paper forms, per-office spreadsheets, WhatsApp and QuickBooks. This project documents current operations and scopes a Phlo-built system as Phase 1 plus a "Build later" list (renamed from Phase 2 on 2026-11-04). The end goal is a proposal to Friendly Staffing for an end-to-end staffing and recruitment platform covering scope, timeline and cost only; detailing within the scope comes later. Phase 1 (re-phased 2026-11-03, target go-live 15 January 2027): worker onboarding, employer order intake, shortlisting, communication tracking (WhatsApp Business, email, SMS fallback), approvals and trials for the employers that need them, dispatch/replacements, Friendly Staffing's own timekeeping on phones (a separate module; how it is built, e.g. a mobile app, is an open Jetbro decision that drives the development cost), and payroll in Phlo: payment methods A and B, deductions, pay stubs, the bank upload file (bank and format to be confirmed) and everything else related to payroll: vacation pay accrual, CRA remittance figures, ROE.BLK files for ROE Web, T4 slips and the T4 electronic filing file, WSIB figures (payments to the government made outside Phlo), and client invoicing (bill rate = pay rate + margin, extra charges, conversion fees, HST; added 2026-11-04), with final amounts and invoices pushed to QuickBooks, which stays for bookkeeping. Build later: receivables, the worker self-serve job portal and loaded-margin reporting. Commercial model: one-time development and implementation cost over about 2 months, then an AMC, hosting separate, plus an estimated monthly running cost; no Phlo licence. Amounts are kept outside git.
 
 ## Domain Glossary
 
 | Term | Definition |
 |---|---|
-| Pay rate | Hourly rate Friendly Staffing pays the worker, before deductions |
-| Bill rate | Hourly rate the client pays Friendly Staffing for a position; fixed per client and position |
+| Pay rate | Hourly rate Friendly Staffing pays the worker, before deductions. Rate A is set per worker; in the payroll Excel rate B = rate A × 0.9 and rate C = rate A × 0.85. Overtime pay = 1.5 × rate |
+| Bill rate | Hourly rate the client pays Friendly Staffing for a position. Derived from the pay rate plus a margin that staff add by hand when invoicing. Overtime bill rate is about 1.5 times the regular bill rate |
 | Employee code | 6-digit worker ID, written "Y MM NNN" (year digit, month, then staff and serial). Generated when the worker is assigned their first job |
 | Temporary code | Identifier for a validated worker before the first job. Looks different from the employee code |
 | Worker status | Registered → Validated (Inactive) → Active. Active from the first job assignment |
 | Payment method | A = direct deduction (treated as an employee; government deductions apply). B = subcontractor (no deductions). The worker chooses A, B or both |
-| Payroll Excel | Friendly Staffing's weekly sheet of workers by employer, with rates and payment method; produces gross pay and is the basis for invoices |
+| Payroll Excel | Friendly Staffing's weekly sheet of workers by employer, with rates and payment method; produces gross pay only (QuickBooks calculates method A deductions) and is the basis for invoices |
+| Payment mode codes | Values in the payroll Excel beyond A and B: A20, A24, A40, "A20 Only", 2D. Meaning to be confirmed with Tejash |
+| Vacation pay | 4%, accrued over an October to September year and paid once a year as a lump sum |
+| ROE.BLK | ROE Web bulk upload file for Records of Employment |
 | Order | A client's request for workers (count, position, shift time, date) |
 | Temp-to-perm / conversion | Client hires a placed worker onto its own payroll. A fee applies if this happens before the contract period ends |
 | Survival job | Interim work new immigrants take before finding work in their field |
@@ -87,10 +90,10 @@ Documents carry `created:` and `updated:` dates in their frontmatter. These matt
 
 | Deliverable | Where | Notes |
 |---|---|---|
-| Platform architecture (Phlo-branded, A4, 15 pages) | HTML source: `scope/phlo-friendly-staffing-architecture.html`. Review copy: https://claude.ai/artifact/TbPdDSSTccQMVzM1Qg65Xi | Regenerate the PDF from the HTML with headless Chrome. The PDF is kept outside the repo at `~/Desktop/Jetbro/Phlo for Friendly Staffing - Platform Architecture.pdf` |
+| Proposal: scope, architecture, timeline and commercials (Phlo-branded, A4, 17 pages) | HTML source: `scope/phlo-friendly-staffing-architecture.html`. Review copy: https://claude.ai/artifact/TbPdDSSTccQMVzM1Qg65Xi | Regenerate the PDF from the HTML with headless Chrome. The repo copy replaces the commercials page with "shared separately" (the repo is public); the review copy and the PDF carry the amounts. The PDF is kept outside the repo at `~/Desktop/Jetbro/Phlo for Friendly Staffing - Proposal.pdf` |
 
 ## Project-Specific Rules
 
-- Exactly two phases. Every requirement must be tagged Phase 1, Phase 2 or out of scope.
+- Every requirement is tagged Phase 1, Build later or out of scope. Do not call the later work "Phase 2" in new documents.
 - Spell the platform "Phlo" (transcripts render it as "Flow").
 - Jetbro's pre-workshop draft documents are unreliable drafts; the 2026-10-21 workshop and Rohan's 2026-10-26 answers take precedence.

@@ -2,7 +2,7 @@
 title: "Weekly Client Timesheet — Molinaro's Fine Italian Food"
 status: in-review
 created: 2026-10-26
-updated: 2026-10-26
+updated: 2026-11-04
 tags: [observation, artifact, timekeeping, client]
 ---
 
@@ -13,6 +13,8 @@ tags: [observation, artifact, timekeeping, client]
 - **Area:** Client site, Molinaro's Fine Italian Food
 - **Station/Cell:** Handwritten on page 1: "Pizza Line (F/L)" [UNCONFIRMED reading]
 - **Address/Building:** [UNKNOWN]
+
+**Other formats (2026-11-04):** a Molinaro's department sheet and a typed Zebra Packaging sheet prepared by Friendly Staffing and signed by the client. See [obs-client-payroll-samples-2026-11-04](obs-client-payroll-samples-2026-11-04.md), section 6.
 
 **Source file:** `00-inbox/23083148_260817.pdf`.
 - 17 faxed pages.

@@ -2,7 +2,7 @@
 title: "Worker Registration and Validation"
 status: draft
 created: 2026-10-27
-updated: 2026-11-03
+updated: 2026-11-04
 tags: [process, onboarding, worker, phase-1]
 ---
 
@@ -28,7 +28,7 @@ tags: [process, onboarding, worker, phase-1]
 
 | Input | Source | Notes |
 |---|---|---|
-| Registration form | Worker | Paper today. Fields listed in [obs-worker-registration-form](../10-observations/obs-worker-registration-form.md) |
+| Registration form | Worker | Paper today; current version dated 11 August 2026. Fields listed in [obs-worker-registration-form](../10-observations/obs-worker-registration-form.md) |
 | Identity and work-eligibility documents | Worker | [UNKNOWN: which documents, and whether copies are kept] |
 | Referral | Existing or past worker | About 99% of workers come by referral |
 
@@ -67,7 +67,7 @@ tags: [process, onboarding, worker, phase-1]
    - licences and certifications the worker claims (e.g. forklift)
    - payment method chosen: A (direct deduction), B (subcontractor), or both with the hours split
    - TD1 and TD1ON, for method A income tax
-   - bank details for the payment file
+   - bank details for the bank upload file
 5. Staff check whether the record is complete and valid.
    - **If valid:** go to step 6.
    - **If not:** go to Exception A.
@@ -95,7 +95,7 @@ M1. Both offices' spreadsheets are imported once.
 M2. Duplicates across offices are merged. Existing employee codes are kept.
 M3. Imported workers are mapped to the new statuses: workers who have worked before are Active and keep their code; validated workers who never worked are Inactive.
 
-## Phase 2 Changes
+## Build Later
 
 - Workers log in to a self-serve portal to update their profile and documents ([proc-03](proc-03-shortlisting-and-outreach.md) covers browsing and applying for openings).
 
@@ -125,8 +125,9 @@ M3. Imported workers are mapped to the new statuses: workers who have worked bef
 ## Open Questions
 
 1. Which documents do staff verify today, and are copies kept?
-2. Is there a newer version of the registration form?
+2. What is the "E3P" field at the top of the current form? (Asked of Tejash.)
 3. Which digit of the employee code identifies the registering associate?
 4. Should past pay rate and references be added to the Phase 1 form?
 5. Is the worker's payment method (A direct deduction, B subcontractor, or both) chosen at registration or at the first job? Can it change later?
 6. Does a worker who leaves and returns keep the original employee code?
+7. Why does the worker list record commute (car or bus)? (Asked of Tejash.)

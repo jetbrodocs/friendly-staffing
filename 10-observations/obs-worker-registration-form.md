@@ -2,7 +2,7 @@
 title: "Worker Registration Form (Paper)"
 status: in-review
 created: 2026-10-26
-updated: 2026-10-26
+updated: 2026-11-04
 tags: [observation, artifact, onboarding, worker]
 ---
 
@@ -87,5 +87,6 @@ A new worker fills in a one-page paper form by hand and signs it. Staff verify t
 ## Open Questions
 
 1. Is there a newer version of the form? Tejash said the employee code goes "on top" in the current version.
+   **Answered 2026-11-04:** the current version is dated 11 August 2026. Same fields; no employee code field; an unlabelled "E3P" field at the top [UNKNOWN: meaning]. See [obs-client-payroll-samples-2026-11-04](obs-client-payroll-samples-2026-11-04.md), section 7.
 2. What documents are verified (PR card, work permit, study permit, SIN letter, licence) and are copies kept?
 3. Which staff digit maps to which associate in the employee code?

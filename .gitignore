@@ -7,3 +7,11 @@
 scope/*.pdf
 # Internal commercials: keep out of GitHub (repo is public)
 00-inbox/internal-commercials-*.md
+# Client samples sent 2026-11-04: SINs, pay, names, addresses. Keep out of GitHub
+00-inbox/*Invoice*.pdf
+00-inbox/APPLICATION FORM*.pdf
+00-inbox/*Paystub*.xps
+00-inbox/*time sheet*.pdf
+00-inbox/ROE sample.pdf
+00-inbox/T4 sample.pdf
+00-inbox/Report file.xlsx

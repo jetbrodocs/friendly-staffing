@@ -2,7 +2,7 @@
 title: "Client Order Intake"
 status: draft
 created: 2026-10-27
-updated: 2026-11-03
+updated: 2026-11-04
 tags: [process, orders, client, phase-1]
 ---
 
@@ -30,7 +30,7 @@ tags: [process, orders, client, phase-1]
 |---|---|---|
 | Order | Client supervisor | Phone, text, email, or a WhatsApp group set up for that supervisor |
 | Order change | Client supervisor | Example: the 3 PM shift moved to 5 PM as a 12-hour shift |
-| Client and position terms | Agreement with client | Bill rate per position. Contracts are not binding, as clients use up to three agencies |
+| Client and position terms | Agreement with client | Bill rate per position: pay rate plus a margin, set by hand today. Contracts are not binding, as clients use up to three agencies |
 
 ## Outputs
 
@@ -85,7 +85,7 @@ C2. Phlo lists the confirmed workers affected. Staff notify them and release the
 C3. The timekeeper's daily list is updated.
 C4. No cancellation fee applies. Cancellation after workers have arrived is rare; if it happens, the three-hour rule applies ([proc-05](proc-05-weekly-timesheet-to-payroll.md)).
 
-## Phase 2 Changes
+## Build Later
 
 - No change to intake. Automatic reading of WhatsApp groups remains under assessment.
 
