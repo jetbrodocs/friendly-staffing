@@ -5,3 +5,5 @@
 00-inbox/23083148_260817.pdf
 # Exported PDFs live outside the repo
 scope/*.pdf
+# Internal commercials: keep out of GitHub (repo is public)
+00-inbox/internal-commercials-*.md

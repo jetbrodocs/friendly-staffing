@@ -2,7 +2,7 @@
 title: "Canada and Ontario Regulatory Review"
 status: draft
 created: 2026-10-27
-updated: 2026-10-27
+updated: 2026-11-03
 tags: [analysis, compliance, regulatory, ontario, payroll]
 ---
 
@@ -40,9 +40,8 @@ This is a business-analysis review, not legal advice. Every item needs confirmat
 
 - **What they are.** TD1 (federal) and TD1ON (Ontario) are short forms each worker fills in once when hired, and again when their situation changes. On them, the worker claims personal tax credits, such as the basic personal amount, a spouse or dependants, or being a student.
 - **What they do.** The employer uses them to decide how much income tax to hold back from each paycheque. If a worker submits nothing, the employer withholds as if they claim only the basic personal amount.
-- **Who needs them.** Only whoever calculates the income tax deduction. Today that is presumably QuickBooks [UNCONFIRMED].
-  - If Phase 1 **shows** deductions that QuickBooks calculates, TD1s stay with QuickBooks.
-  - If our system **calculates** income tax, TD1 and TD1ON collection becomes a Phase 1 onboarding step.
+- **Who needs them.** Only whoever calculates the income tax deduction. Today that is Friendly Staffing's payroll Excel, checked in QuickBooks.
+  - From 2026-11-03, Phlo calculates payroll in Phase 1, so TD1 and TD1ON collection is a Phase 1 onboarding step for method A workers.
 
 ## Findings
 
@@ -50,12 +49,13 @@ This is a business-analysis review, not legal advice. Every item needs confirmat
 
 | # | Rule | Where it appears in inbox | What it means here | Phase |
 |---|---|---|---|---|
-| A1 | **Source deductions:** CPP (and the second-tier CPP2), EI premiums and income tax withheld from every pay, then remitted to the CRA on the employer's remittance schedule | Mind map, both Jetbro drafts | Pay rate × hours → gross → deductions → net. Rohan wants deductions "shown and managed" | Calculation and remittance: Phase 2 (payroll). Display in Phase 1: [DECISION NEEDED] |
-| A2 | **TD1 / TD1ON** collected at hire | Jetbro drafts | See primer above | Follows A1 |
+| A1 | **Source deductions:** CPP (and the second-tier CPP2), EI premiums and income tax withheld from every pay, then remitted to the CRA on the employer's remittance schedule | Mind map, both Jetbro drafts | Pay rate × hours → gross → deductions → net. Rohan wants deductions "shown and managed" | Phase 1 (Phlo payroll). Remittance amounts calculated in Phlo; payment made by Friendly Staffing outside Phlo |
+| A2 | **TD1 / TD1ON** collected at hire | Jetbro drafts | See primer above | Phase 1 (onboarding; needed for Phlo payroll) |
 | A3 | **SIN** collected; 9-series SINs (temporary residents) carry an expiry date | Form: "SIN # … Valid Until" | Store SIN encrypted, and use it only for payroll and tax. Track the SIN expiry for 9-series SINs | Phase 1 (onboarding) |
-| A4 | **T4 slips** issued to each worker by the end of February for the prior year | Mind map, drafts | High turnover means thousands of T4s a year | Phase 2 |
-| A5 | **ROE** issued to Service Canada after an **interruption of earnings**: generally 7 consecutive days with no work and no insurable earnings, or when Service Canada asks | Drafts say "ROE issued when assignment ends" | **Draft is inaccurate.** For a temp agency, the end of one client assignment is not itself the trigger. A gap between assignments can be. The system needs to detect 7-day no-work gaps per worker | Phase 2 (data captured in Phase 1) |
+| A4 | **T4 slips** issued to each worker by the end of February for the prior year | Mind map, drafts | High turnover means thousands of T4s a year | Phase 1 (produced in Phlo; filed outside Phlo) |
+| A5 | **ROE** issued to Service Canada after an **interruption of earnings**: generally 7 consecutive days with no work and no insurable earnings, or when Service Canada asks | Drafts say "ROE issued when assignment ends" | **Draft is inaccurate.** For a temp agency, the end of one client assignment is not itself the trigger. A gap between assignments can be. The system needs to detect 7-day no-work gaps per worker | Phase 1 (produced in Phlo; filed outside Phlo) |
 | A6 | **HST (13% Ontario)** charged on client invoices, with the GST/HST number shown | Drafts | Invoice line: billable hours × bill rate + HST | Phase 2 (invoicing) |
+| A7 | **Worker classification:** CRA decides employee or self-employed status on the actual working relationship (control, tools, chance of profit, integration), not on the label or the worker's preference. Under the ESA, a temp help agency's assignment workers are generally its employees | 2026-11-03 meeting: payment method A (direct deduction, treated as employee) or B (subcontractor, no deductions). Workers choose A, B or both | **High risk.** The same worker doing the same work under the same supervision is unlikely to be a contractor for part of the week. If CRA reclassifies method B pay, Friendly Staffing owes both shares of CPP and EI, the income tax it should have withheld, and penalties and interest. It also affects WSIB premiums, insurable earnings on ROEs, ESA overtime and vacation pay, and T4 reporting. The system will record each worker's method either way; the decision is Friendly Staffing's. [VERIFY] with Friendly Staffing's accountant | Phase 1 (record method, split gross); Phase 2 (payroll treatment) |
 
 ### B. Ontario Employment Standards Act (ESA)
 
@@ -63,11 +63,11 @@ This is a business-analysis review, not legal advice. Every item needs confirmat
 |---|---|---|---|---|
 | B1 | **Overtime** at 1.5× after **44 hours per week** | Mind map, drafts. Confirmed on the Molinaro's sheet (44:00 Reg + OT) | The weekly total must split Reg/OT at 44 hours across **all clients the worker worked at that week**, not per client [VERIFY] | Phase 1 (timesheet output) |
 | B2 | **Minimum wage:** $17.95/hr general from **2026-10-01** (was $17.60) | Not in inbox | Reject or flag any pay rate below the minimum. Worth noting for the $18 example rate | Phase 1 (rate setup) |
-| B3 | **Vacation pay:** minimum 4% (6% after 5 years with the employer) | Drafts | Calculated on each pay for temp workers, or accrued | Phase 2 |
-| B4 | **Public holiday pay** | Mind map, drafts | Formula based on wages earned in the 4 weeks before the holiday | Phase 2 |
+| B3 | **Vacation pay:** minimum 4% (6% after 5 years with the employer) | Drafts | Calculated on each pay for temp workers, or accrued | Phase 1 (payroll) |
+| B4 | **Public holiday pay** | Mind map, drafts | Formula based on wages earned in the 4 weeks before the holiday | Phase 1 (payroll) |
 | B5 | **Eating period:** 30 minutes after no more than 5 hours of work; unpaid unless agreed | Drafts ("breaks per ESA minimums") | Break rules are client-specific (Rohan Q14) but must meet this floor. The "30 min lunch paid" remark from the call needs confirmation | Phase 1 (hours calculation) |
 | B6 | **Three-hour rule:** a worker who regularly works more than 3 hours and is sent home early is paid at least 3 hours [VERIFY current wording] | Not in inbox | Relevant when production changes cut a shift short. The paid hours can then differ from hours worked | Phase 1 (timesheet rules) |
-| B7 | **Wage statement** (pay stub) on or before each pay day | Mind map, drafts | Phase 2 output | Phase 2 |
+| B7 | **Wage statement** (pay stub) on or before each pay day | Mind map, drafts | Phase 2 output | Phase 1 (Phlo pay stubs) |
 | B8 | **Record keeping:** pay and hours records kept 3 years | Mind map ("retention controls") | Phase 1 timesheets are payroll records. Keep them for 3 years minimum | Phase 1 |
 | B9 | **Assignment information.** The agency must give each worker written information about each assignment [VERIFY exact list]: <br>• agency name and contact details<br>• client name and address<br>• wage rate<br>• hours of work<br>• pay period and pay day<br>• a general description of the work | Not in inbox | The confirmation message Tejash wants (site rules, GMP) can also carry this required information | Phase 1 (confirmation message) |
 | B10 | **No fees to workers** for registering, being assigned, résumé help or interview prep | Not in inbox | Confirms the current practice. The system should never bill workers | n/a |
@@ -96,7 +96,7 @@ This is a business-analysis review, not legal advice. Every item needs confirmat
 
 | # | Rule | Where it appears | What it means here | Phase |
 |---|---|---|---|---|
-| E1 | The temp agency, as employer, registers with WSIB and pays premiums on insurable earnings, by rate group | Mind map, drafts | Premiums come from payroll | Phase 2 |
+| E1 | The temp agency, as employer, registers with WSIB and pays premiums on insurable earnings, by rate group | Mind map, drafts | Premiums come from payroll | Phase 1 (premium figures in Phlo; payment outside Phlo) |
 | E2 | **Injury reporting:** the employer reports a lost-time injury within 3 days of learning of it | Mind map ("incident documentation") | Incident log per worker per client | [DECISION NEEDED] |
 | E3 | Safety orientation and training records | Mind map | Matches Tejash's "standard instructions per client and position". A record that the worker received them is useful evidence | Phase 1 (instruction acknowledgement) |
 
@@ -124,20 +124,22 @@ This is a business-analysis review, not legal advice. Every item needs confirmat
    - consent and access controls (F1, F2)
    - no protected grounds in matching (F3)
    - accessible employer portal (F4)
-2. **Decide the deductions question** before scoping: show deductions calculated by QuickBooks, or calculate them in Phase 1. This determines whether TD1/TD1ON, CPP/EI/tax tables and their yearly updates enter Phase 1.
-3. **Leave statutory filing to Phase 2:** CRA remittances, T4, ROE, WSIB premiums, vacation and public holiday pay, pay stubs, HST invoicing.
+2. **Payroll is in Phase 1 (decided 2026-11-03).** TD1/TD1ON, CPP/EI/tax tables and their twice-yearly updates (January and July), vacation and public holiday pay and ESA-compliant pay stubs all enter Phase 1.
+3. **Statutory figures are in Phase 1 (decided 2026-11-03):** Phlo calculates CRA remittance amounts and produces T4s, ROEs and WSIB figures, using year-to-date history imported from QuickBooks. Payments to and from the government are made outside Phlo. HST invoicing stays in Phase 2.
 4. **Book a specialist review** with an Ontario employment/payroll specialist. Cover every [VERIFY] item, especially C2 (AI disclosure), B11 (conversion fee), F3 (form questions) and D1 (permit types).
-5. **Confirm the licence:** ask Tejash to confirm Friendly Staffing's temp help agency licence number.
+5. **Confirm worker classification:** ask Friendly Staffing's accountant to confirm payment method B, and workers who use both methods, for CPP, EI, tax, WSIB and ESA purposes (A7). Raise it with Tejash verbally, not in client documents. Proposal wording stays neutral: Phlo supports the payment methods Friendly Staffing configures.
+6. **Confirm the licence:** ask Tejash to confirm Friendly Staffing's temp help agency licence number.
 
 ## Open Questions
 
-1. Does QuickBooks currently calculate CPP, EI and income tax for Friendly Staffing workers? Are TD1s collected today?
+1. Are TD1s collected today? (Deductions are calculated in the payroll Excel and checked in QuickBooks.)
 2. Does Friendly Staffing hold an Ontario temp help agency licence? What is the number?
 3. How many employees does Friendly Staffing have, including assignment workers? This decides the 25+ job-posting rules and the 50+ AODA threshold.
 4. When a client sends workers home early because production changed, are they paid the hours worked or a minimum?
 5. Is lunch paid at any client? Tejash said "30 minutes lunch break is paid".
 6. How are student workers' academic break dates known today?
 7. Does Friendly Staffing keep an injury or incident log today?
+8. For method B workers: do they invoice Friendly Staffing, hold their own business or HST number, or receive a T4A? Is ESA overtime paid on method B hours?
 
 ## References
 

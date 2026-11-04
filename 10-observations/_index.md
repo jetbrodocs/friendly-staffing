@@ -1,7 +1,7 @@
 ---
 title: "Observations Index"
 status: active
-updated: 2026-10-26
+updated: 2026-11-03
 ---
 
 # Observations
@@ -11,3 +11,5 @@ updated: 2026-10-26
 - [Weekly client timesheet: Molinaro's](obs-client-timesheet-molinaros.md): faxed handwritten timesheet, about 115 workers, week of Aug 10, 2026
 - [Client mind map](obs-client-mind-map.md): Friendly Staffing's own target-platform document (2026-10-16)
 - [Q&A: Rohan's scope clarifications (2026-10-26)](qa-2026-10-26-rohan-scope-clarifications.md): phase decisions and open contradictions
+- [Follow-up meeting with Friendly Staffing (2026-11-03)](obs-client-meeting-2026-11-03.md): employee code at first job, editable priority order, approval only for some employers, two-sided no-shows, order deletion; today's pay and invoicing: payroll Excel, payment methods A and B, QuickBooks stubs, bank XML, manual invoices
+- [Q&A: Rohan's meeting clarifications (2026-11-03)](qa-2026-11-03-rohan-meeting-clarifications.md): worker statuses, who sets priorities, cancellations; proposal goal (scope, timeline, cost)

@@ -2,7 +2,7 @@
 title: "Client Order Intake"
 status: draft
 created: 2026-10-27
-updated: 2026-10-27
+updated: 2026-11-03
 tags: [process, orders, client, phase-1]
 ---
 
@@ -10,7 +10,7 @@ tags: [process, orders, client, phase-1]
 
 ## Process Overview
 
-- **Purpose:** Capture each client request for workers accurately, once, whatever channel it arrives on.
+- **Purpose:** Capture each client request for workers accurately, once, whatever channel it arrives on, and keep it current as the client adds to, changes or cancels it.
 - **Trigger:** A client supervisor asks for workers, or changes an existing request.
 - **End condition:** The order is recorded and handed to shortlisting.
 - **Frequency:** Several times a day. Same-day changes are common at the high-volume client.
@@ -64,7 +64,9 @@ tags: [process, orders, client, phase-1]
 4. Every message with the employer about the order is logged against it.
 5. The order goes to shortlisting.
 
-### Exception A: Same-day Change
+### Exception A: Change Before or On the Day
+
+Employers often change their requirements as the job date approaches. Staff can add to, edit or delete any order.
 
 A1. The client changes the time, length or number of workers.
 A2. Staff update the order in Phlo. The change and its source are logged.
@@ -73,8 +75,15 @@ A4. If more workers are needed, the extra openings return to shortlisting.
 
 ### Exception B: Replacement Order
 
-B1. A no-show or walk-off creates a replacement order automatically ([proc-04](proc-04-dispatch-and-replacements.md), Exception A).
+B1. A worker's advance cancellation, no-show or walk-off creates a replacement order automatically ([proc-04](proc-04-dispatch-and-replacements.md), Exceptions A and D).
 B2. The replacement order goes straight to shortlisting.
+
+### Exception C: Order Cancelled
+
+C1. The client cancels the order, or part of it. Staff delete or reduce the order in Phlo. The cancellation and its source are logged.
+C2. Phlo lists the confirmed workers affected. Staff notify them and release them for other orders.
+C3. The timekeeper's daily list is updated.
+C4. No cancellation fee applies. Cancellation after workers have arrived is rare; if it happens, the three-hour rule applies ([proc-05](proc-05-weekly-timesheet-to-payroll.md)).
 
 ## Phase 2 Changes
 
@@ -105,3 +114,4 @@ B2. The replacement order goes straight to shortlisting.
 1. Who in the Friendly Staffing team owns updating confirmed workers after a change? Rohan: the team is responsible, but the process is open.
 2. Will clients use the employer portal, or will most orders still arrive by phone and WhatsApp?
 3. What are the conversion-fee terms per client?
+4. Should deleted orders be kept as cancelled records for reporting, rather than removed?

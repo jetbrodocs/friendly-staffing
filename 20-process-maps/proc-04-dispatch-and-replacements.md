@@ -2,7 +2,7 @@
 title: "Dispatch, No-shows and Replacements"
 status: draft
 created: 2026-10-27
-updated: 2026-10-27
+updated: 2026-11-03
 tags: [process, dispatch, replacements, phase-1]
 ---
 
@@ -11,7 +11,7 @@ tags: [process, dispatch, replacements, phase-1]
 ## Process Overview
 
 - **Purpose:** Get approved workers to the right site at the right time, knowing the site rules, and recover quickly when someone does not show or leaves.
-- **Trigger:** The employer approves a worker ([proc-03](proc-03-shortlisting-and-outreach.md)).
+- **Trigger:** A worker is confirmed for an order ([proc-03](proc-03-shortlisting-and-outreach.md)), after employer approval where the employer requires it.
 - **End condition:** The worker completes the shift, or a replacement covers it.
 - **Frequency:** Every assignment, every shift.
 - **Typical duration:** From confirmation to shift start, often less than 24 hours.
@@ -21,7 +21,7 @@ tags: [process, dispatch, replacements, phase-1]
 | Role | Responsibility in This Process |
 |---|---|
 | Office staff | Confirm workers, send instructions, maintain the daily list, arrange replacements |
-| Worker | Attends the shift, follows site rules |
+| Worker | Attends the shift, follows site rules. Tells Friendly Staffing in advance if they cannot attend |
 | Employer timekeeper | Receives the daily list, records attendance |
 | Client supervisor | Reports no-shows, walk-offs and changes |
 
@@ -29,7 +29,7 @@ tags: [process, dispatch, replacements, phase-1]
 
 | Input | Source | Notes |
 |---|---|---|
-| Approved worker | [proc-03](proc-03-shortlisting-and-outreach.md) | |
+| Confirmed worker | [proc-03](proc-03-shortlisting-and-outreach.md) | |
 | Site instructions | Client, site and position master | GMP rules, safety gear, break rules |
 
 ## Outputs
@@ -39,7 +39,7 @@ tags: [process, dispatch, replacements, phase-1]
 | Confirmation and reminders | Worker | |
 | Daily worker list | Employer timekeeper | Employee code, name, scheduled time |
 | Assignment record | Worker record | Includes first day at the client, for the conversion fee |
-| Incident record | Worker record | No-show or walk-off |
+| Incident record | Worker record | Advance cancellation, no-show or walk-off |
 
 ## Current Process (as-is)
 
@@ -56,20 +56,24 @@ tags: [process, dispatch, replacements, phase-1]
    - pay rate
    - the client's site rules for that position (e.g. hairnet, apron, safety suits)
    - the assignment details the ESA requires the agency to give
-2. Phlo records the assignment. If this is the worker's first day at the client, that date is stored for the conversion-fee window.
+2. Phlo records the assignment.
+   - If this is the worker's **first job**, the worker becomes **Active** and Phlo generates the permanent employee code, replacing the temporary code ([proc-01](proc-01-worker-registration.md)).
+   - If this is the worker's first day at the client, that date is stored for the conversion-fee window.
 3. Phlo sends reminders the day before and the morning of the shift.
-4. Staff send the daily list to the employer's timekeeper from Phlo: employee code, name, shift time.
+4. Staff send the daily list to the employer's timekeeper from Phlo: employee code, name, shift time. With the Phlo timekeeping module, the daily list appears on the timekeeper's phone, where she marks arrivals and punches, and staff see live arrival counts (example: 55 of 60 arrived).
 5. The worker attends and works the shift.
    - **If the worker works the shift:** the hours follow [proc-05](proc-05-weekly-timesheet-to-payroll.md).
-   - **If the worker does not show or walks off:** go to Exception A.
+   - **If the worker cancels in advance:** go to Exception A.
+   - **If the worker does not show or walks off:** go to Exception D.
    - **If the client changes the shift on the day:** go to Exception B.
 
-### Exception A: No-show or Walk-off
+### Exception A: Worker Cancels in Advance (worker side)
 
-A1. The client reports the absence. Staff log it on the worker's record with date, client and reason.
-A2. Phlo opens a replacement order for the same position and shift, or the next one.
+A1. The worker tells Friendly Staffing they cannot attend. Staff log it on the worker's record with date, client and reason, and whether it met the notice period. [UNKNOWN: length of the notice period]
+A2. Phlo opens a replacement order for the same position and shift.
 A3. The replacement order goes to shortlisting ([proc-03](proc-03-shortlisting-and-outreach.md)).
-A4. The incident counts in the worker's reliability history. How this affects future ranking is for Friendly Staffing to decide.
+A4. The cancellation counts in the worker's reliability history, as a no-show does. How this affects future ranking is set in the priority order ([proc-03](proc-03-shortlisting-and-outreach.md)).
+A5. Staff tell the employer whether the replacement is covered.
 
 ### Exception B: Same-day Change
 
@@ -85,10 +89,17 @@ C2. Phlo shows the worker's first day at that client.
    - **If outside the window:** no fee.
 C3. The worker's record is updated (status, end of assignment). Invoicing the fee happens in Phase 2.
 
+### Exception D: No-show or Walk-off (employer side)
+
+D1. The client reports the absence. Staff log it on the worker's record with date, client and reason.
+D2. Staff contact the worker to find out what happened. The outcome is logged.
+D3. Phlo opens a replacement order for the same position and shift, or the next one.
+D4. The replacement order goes to shortlisting ([proc-03](proc-03-shortlisting-and-outreach.md)).
+D5. The incident counts in the worker's reliability history.
+
 ## Phase 2 Changes
 
-- The daily list appears on Friendly Staffing's tablet at the client site. The tablet records arrivals and punches.
-- Staff see live arrival counts (example: 55 of 60 arrived).
+- Conversion fees are invoiced from Phlo (Exception C).
 
 ## Connected Processes
 
@@ -112,5 +123,7 @@ C3. The worker's record is updated (status, end of assignment). Invoicing the fe
 ## Open Questions
 
 1. What are the conversion-fee amounts and windows per client?
-2. Should a no-show lower a worker's ranking, and by how much?
-3. Should workers acknowledge receipt of the site rules (a reply or a tick), as evidence?
+2. Should a no-show or advance cancellation lower a worker's ranking, and by how much? (Set by Tejash and the office leads in the priority order.)
+3. What notice period must a worker give to cancel in advance?
+4. Is the worker marked Active when they accept the first offer, or on the first day worked?
+5. Should workers acknowledge receipt of the site rules (a reply or a tick), as evidence?

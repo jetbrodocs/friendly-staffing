@@ -1,18 +1,18 @@
 ---
-title: "Shortlisting, Outreach and Employer Approval"
+title: "Shortlisting, Outreach and Confirmation"
 status: draft
 created: 2026-10-27
-updated: 2026-10-27
+updated: 2026-11-03
 tags: [process, shortlisting, communication, phase-1]
 ---
 
-# Shortlisting, Outreach and Employer Approval
+# Shortlisting, Outreach and Confirmation
 
 ## Process Overview
 
-- **Purpose:** Fill each order with willing, eligible workers whom the employer approves.
+- **Purpose:** Fill each order with willing, eligible workers, with employer approval only where the employer requires it.
 - **Trigger:** An order is recorded ([proc-02](proc-02-order-intake.md)).
-- **End condition:** The employer has approved enough workers to cover the order.
+- **End condition:** Enough willing, eligible workers are confirmed to cover the order. Where the employer requires approval, it has approved them.
 - **Frequency:** Every order, including replacements.
 - **Typical duration:** Hours. Same-day orders must close within a few hours.
 
@@ -22,20 +22,22 @@ tags: [process, shortlisting, communication, phase-1]
 |---|---|
 | Office staff | Shortlist, message and call workers. Send profiles to the employer |
 | Worker | Accepts or declines the offer |
-| Employer | Approves or rejects shortlisted workers |
+| Tejash Jain and office leads | Set and change the shortlisting priority order |
+| Employer (some employers only) | Approves or rejects workers, or runs a trial |
 
 ## Inputs
 
 | Input | Source | Notes |
 |---|---|---|
 | Order | [proc-02](proc-02-order-intake.md) | Includes position requirements and pay rate |
-| Worker database | [proc-01](proc-01-worker-registration.md) | Only Ready to Work workers |
+| Worker database | [proc-01](proc-01-worker-registration.md) | Validated workers only (Inactive or Active) |
+| Priority order | Tejash Jain and office leads | Editable at any time in Phlo |
 
 ## Outputs
 
 | Output | Destination | Notes |
 |---|---|---|
-| Approved workers for the order | Dispatch ([proc-04](proc-04-dispatch-and-replacements.md)) | |
+| Confirmed workers for the order | Dispatch ([proc-04](proc-04-dispatch-and-replacements.md)) | |
 | Message and call log | Worker and order records | |
 
 ## Current Process (as-is)
@@ -53,19 +55,18 @@ tags: [process, shortlisting, communication, phase-1]
 ## Phase 1 Process (to-be)
 
 1. Phlo builds a ranked shortlist for the order.
-   - **Eligibility filters:** Ready to Work, valid permit, study-permit hours within the weekly cap, required licences, availability for the shift.
-   - **Ranking:** Friendly Staffing's priority rules (to be supplied at development start). The ranking never uses gender, age or medical status.
+   - **Eligibility filters:** Validated (Inactive or Active), valid permit, study-permit hours within the weekly cap, required licences, availability for the shift.
+   - **Ranking:** the priority order set by Tejash and the office leads. There is one order for the whole business, which can be overridden for a specific client or role. They can change the factors and their order at any time in Phlo. The ranking never uses gender, age or medical status.
 2. Staff review the list and select candidates. Example: five for two openings.
-3. Phlo sends the offer to the selected workers by SMS, WhatsApp or email (channel to be decided). The offer states site, date, shift and pay, and asks the worker to reply 1 for yes or 0 for no.
+3. Phlo sends the offer to the selected workers by WhatsApp Business and email, with SMS as a fallback. The offer states site, date, shift and pay, and asks the worker to reply 1 for yes or 0 for no.
 4. Phlo waits for replies.
    - **If no reply within about 30 minutes:** go to Exception A.
    - **If the worker replies 0 (no):** go to Exception B.
    - **If the worker replies 1 (yes):** go to step 5.
-5. Staff share the worker's profile with the employer.
-6. The employer reviews the profile.
-   - **If approved:** the worker moves to dispatch ([proc-04](proc-04-dispatch-and-replacements.md)).
-   - **If rejected:** go to Exception B.
-7. When approved workers cover the order, it is marked filled. Remaining yes-replies are thanked and released.
+5. Phlo checks whether this employer requires approval.
+   - **If not (the usual case):** the worker is confirmed and moves to dispatch ([proc-04](proc-04-dispatch-and-replacements.md)). Friendly Staffing is responsible for sending workers with the right qualifications and experience.
+   - **If yes:** go to Exception C.
+6. When confirmed workers cover the order, it is marked filled. Remaining yes-replies are thanked and released.
 
 ### Exception A: No Reply
 
@@ -78,6 +79,17 @@ A3. Return to step 4 with the worker's answer.
 B1. The decline or rejection is logged on the worker's record.
 B2. Phlo offers the opening to the next worker on the ranked list. Return to step 3.
 B3. If the list is exhausted, staff widen the search, for example to workers whose past pay was higher.
+
+### Exception C: Employer Requires Approval or a Trial
+
+Applies only to employers set up with their own approval process or trial. Phase 1 includes one standardised workflow for both. The detailed steps are designed with Friendly Staffing during the build.
+
+C1. Staff send the worker's details to the employer for approval, for example by email. The request is logged against the order.
+C2. Staff record the employer's decision.
+   - **If approved:** the worker moves to dispatch.
+   - **If rejected:** go to Exception B.
+C3. For a trial, staff record the trial date and outcome; the outcome counts as the employer's decision.
+C4. [UNKNOWN: what the employer sees, and what happens if it does not reply in time]
 
 ## Phase 2 Changes
 
@@ -94,8 +106,8 @@ B3. If the list is exhausted, staff widen the search, for example to workers who
 | Step | System/Tool | How It's Used |
 |---|---|---|
 | As-is 3–4 | WhatsApp, phone | Offers and follow-up |
-| Phase 1 steps 1–4 | Phlo shortlist, messaging provider | Ranked list, bulk offers, logged replies |
-| Phase 1 steps 5–6 | Email with secure link, or the employer portal | Employer approval |
+| Phase 1 steps 1–4 | Phlo shortlist; WhatsApp Business, email and SMS providers | Ranked list, bulk offers, logged replies |
+| Exception C | Email, logged in Phlo | Approval for employers that require it |
 
 ## Known Issues
 
@@ -106,7 +118,5 @@ B3. If the list is exhausted, staff widen the search, for example to workers who
 
 ## Open Questions
 
-1. What priority rules and order will Friendly Staffing supply?
-2. Which outreach channel: SMS, WhatsApp Business or email?
-3. What exactly does the employer see when approving a profile?
-4. Does AI-assisted shortlisting from the internal database trigger Ontario's AI-disclosure rule? (Specialist question.)
+1. For employers that require approval: what do they see, and what happens if they do not reply? How are trials run?
+2. Does AI-assisted shortlisting from the internal database trigger Ontario's AI-disclosure rule? (Specialist question.)

@@ -2,7 +2,7 @@
 
 ## Project Description
 
-Friendly Staffing (1953039 Ontario Inc.) is a temp-to-perm staffing agency with two offices in Mississauga, Ontario. It places mostly newly arrived immigrant workers with clients such as food plants and warehouses. Today it runs on paper forms, per-office spreadsheets, WhatsApp and QuickBooks. This project documents current operations and scopes a Phlo-built system in exactly two phases. Phase 1: worker onboarding, employer order intake, shortlisting, communication tracking, dispatch/replacements, and cross-verified timesheets with pay/bill rates. Phase 2: Friendly Staffing's own timekeeping, invoicing, payroll/payments (QuickBooks replacement) and the worker self-serve job portal.
+Friendly Staffing (1953039 Ontario Inc.) is a temp-to-perm staffing agency with two offices in Mississauga, Ontario. It places mostly newly arrived immigrant workers with clients such as food plants and warehouses. Today it runs on paper forms, per-office spreadsheets, WhatsApp and QuickBooks. This project documents current operations and scopes a Phlo-built system in exactly two phases. The end goal is a proposal to Friendly Staffing for an end-to-end staffing and recruitment platform covering scope, timeline and cost only; detailing within the scope comes later. Phase 1 (re-phased 2026-11-03, target go-live 15 January 2027): worker onboarding, employer order intake, shortlisting, communication tracking (WhatsApp Business, email, SMS fallback), approvals and trials for the employers that need them, dispatch/replacements, Friendly Staffing's own timekeeping on phones (a separate module), and payroll in Phlo: payment methods A and B, deductions, pay stubs, the bank XML file and statutory figures (remittances, T4, ROE, WSIB; payments made outside Phlo), with final amounts pushed to QuickBooks, which stays for bookkeeping. Phase 2: client invoicing and receivables, the worker self-serve job portal and loaded-margin reporting. Commercial model: one-time development and implementation cost, hosting separate, 12-month maintenance contract; no Phlo licence. Amounts are kept outside git.
 
 ## Domain Glossary
 
@@ -10,7 +10,11 @@ Friendly Staffing (1953039 Ontario Inc.) is a temp-to-perm staffing agency with 
 |---|---|
 | Pay rate | Hourly rate Friendly Staffing pays the worker, before deductions |
 | Bill rate | Hourly rate the client pays Friendly Staffing for a position; fixed per client and position |
-| Employee code | 6-digit worker ID, written "Y MM NNN" (year digit, month, then staff and serial). Assigned when the worker is validated and marked ready to work |
+| Employee code | 6-digit worker ID, written "Y MM NNN" (year digit, month, then staff and serial). Generated when the worker is assigned their first job |
+| Temporary code | Identifier for a validated worker before the first job. Looks different from the employee code |
+| Worker status | Registered → Validated (Inactive) → Active. Active from the first job assignment |
+| Payment method | A = direct deduction (treated as an employee; government deductions apply). B = subcontractor (no deductions). The worker chooses A, B or both |
+| Payroll Excel | Friendly Staffing's weekly sheet of workers by employer, with rates and payment method; produces gross pay and is the basis for invoices |
 | Order | A client's request for workers (count, position, shift time, date) |
 | Temp-to-perm / conversion | Client hires a placed worker onto its own payroll. A fee applies if this happens before the contract period ends |
 | Survival job | Interim work new immigrants take before finding work in their field |

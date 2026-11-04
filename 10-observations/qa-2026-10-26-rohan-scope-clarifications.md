@@ -2,7 +2,7 @@
 title: "Q&A — Rohan's Scope Clarifications (2026-10-26)"
 status: in-review
 created: 2026-10-26
-updated: 2026-10-27
+updated: 2026-11-03
 tags: [observation, qa, scope, phasing]
 ---
 
@@ -153,7 +153,7 @@ Rohan will message Tejash.
 
 **F2. Employee portal in Phase 1.** None. Workers do not log in or use any portal in Phase 1. The Friendly Staffing team shortlists, prioritises and contacts workers directly as jobs open up. *(Resolves contradiction 2.)* Phase 1 portals are therefore the employer portal (order intake) and the internal staff system.
 
-**F3. Deductions.** Decided 2026-10-27. Phase 1 **shows** deductions. Phase 2 **calculates** them, together with payroll. TD1/TD1ON collection therefore moves to Phase 2. Background: [analysis-canada-ontario-regulatory-review](../30-analysis/analysis-canada-ontario-regulatory-review.md). *(Contradiction 3 resolved. Open: where the Phase 1 figures come from; see Open Questions.)*
+**F3. Deductions.** Decided 2026-10-27. Phase 1 **shows** deductions. Phase 2 **calculates** them, together with payroll. TD1/TD1ON collection therefore moves to Phase 2. Background: [analysis-canada-ontario-regulatory-review](../30-analysis/analysis-canada-ontario-regulatory-review.md). *(Contradiction 3 resolved. Open: where the Phase 1 figures come from; see Open Questions.)* **Superseded 2026-11-03:** payroll, including deductions, moves into Phase 1. See [qa-2026-11-03-rohan-meeting-clarifications](qa-2026-11-03-rohan-meeting-clarifications.md).
 
 **F4. Unphased mind map items.** Rohan wants margin and profitability dashboards in Phase 1 if they are possible without payroll.
 - **Phase 1:** hours-based gross spread, (bill rate − pay rate) × approved hours, per worker, order, client and week. This needs no payroll data.
